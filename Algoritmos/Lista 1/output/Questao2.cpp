@@ -11,17 +11,22 @@ int main(){
     quantC = quantidade de cigarros fumado por dia
     preco = preço da carteira de cigarro
     */
-    int anos, quantC;
+    int anos, quantC, cigarros;
     float preco;
 
     cout << "\nA quantos anos você fuma? ";
     cin >> anos;
 
     cout << "\nQuantos cigarros você fuma por dia? ";
-    cin >> quantC;
+    cin >> cigarros;
 
     cout << "\nQual o preco da carteira de cigarro? ";
     cin >> preco;
 
-    cout << ((anos * 365) * quantC) * preco;
+    cout << "\nQuantos cigarros tem em uma carteira de cigarro? ";
+    cin >> quantC;
+
+    preco /= quantC;
+
+    cout << "\nVocê gastou R$" << ((anos * 365) * cigarros) * preco << " em cigarros.\n\n";
 }
